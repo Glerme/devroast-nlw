@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+	--color-bg-page: #0a0a0a;
+	--color-bg-surface: #0f0f0f;
+	--color-bg-input: #111111;
+	--color-bg-elevated: #1a1a1a;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	--color-border-primary: #2a2a2a;
+	--color-border-focus: #10b981;
+
+	--color-text-primary: #fafafa;
+	--color-text-secondary: #6b7280;
+	--color-text-tertiary: #4b5563;
+
+	--color-accent-green: #10b981;
+	--color-accent-red: #ef4444;
+	--color-accent-amber: #f59e0b;
+	--color-accent-cyan: #06b6d4;
+
+	--color-dot-close: #ef4444;
+	--color-dot-minimize: #f59e0b;
+	--color-dot-maximize: #10b981;
+
+	--color-diff-removed: #ef444415;
+	--color-diff-added: #10b98115;
+
+	--font-mono: "JetBrains Mono", monospace;
+	--font-body: "IBM Plex Mono", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	@apply bg-bg-page text-text-primary font-mono;
 }
