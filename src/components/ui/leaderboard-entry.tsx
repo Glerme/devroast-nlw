@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { codeToHtml } from "shiki";
 
 interface LeaderboardEntryProps {
@@ -6,6 +7,7 @@ interface LeaderboardEntryProps {
 	language: string;
 	code: string;
 	codeLines: number;
+	id?: string;
 }
 
 export async function LeaderboardEntry({
@@ -14,6 +16,7 @@ export async function LeaderboardEntry({
 	language,
 	code,
 	codeLines,
+	id,
 }: LeaderboardEntryProps) {
 	const html = await codeToHtml(code, {
 		lang: language,
@@ -21,9 +24,13 @@ export async function LeaderboardEntry({
 	});
 
 	const lines = code.split("\n");
+	const href = id ? `/roast/${id}` : `/roast/${rank}`;
 
 	return (
-		<div className="border border-border-primary">
+		<Link
+			href={href}
+			className="block border border-border-primary transition-colors hover:border-accent-green/40"
+		>
 			<div className="flex h-12 items-center justify-between border-b border-border-primary px-5">
 				<div className="flex items-center gap-4">
 					<span className="font-mono text-[13px] font-bold">
@@ -52,6 +59,7 @@ export async function LeaderboardEntry({
 				<div className="flex">
 					<div className="flex w-10 shrink-0 flex-col bg-bg-surface pt-4 text-right font-mono text-xs leading-5 text-text-tertiary">
 						{lines.map((_, i) => (
+							// biome-ignore lint/suspicious/noArrayIndexKey: positional line numbers
 							<span key={i} className="pr-2">
 								{i + 1}
 							</span>
@@ -64,6 +72,6 @@ export async function LeaderboardEntry({
 					/>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
