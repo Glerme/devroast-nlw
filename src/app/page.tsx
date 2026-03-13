@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button, SectionTitle } from "@/components/ui";
 import { CodeInputSection } from "./code-input-section";
 
@@ -79,7 +80,9 @@ export default function Home() {
 							{"// the worst code on the internet, ranked by shame"}
 						</p>
 					</div>
+					<Link href="/leaderboard">
 					<Button variant="outline">{"$ view_all >>"}</Button>
+				</Link>
 				</div>
 
 				{/* Table */}

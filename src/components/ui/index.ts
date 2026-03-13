@@ -2,6 +2,7 @@ export { Button } from "./button";
 export { CodeBlock } from "./code-block";
 export { CodeEditor } from "./code-editor";
 export { DiffBlock } from "./diff-block";
+export { LeaderboardEntry } from "./leaderboard-entry";
 export { IssueCard } from "./issue-card";
 export { Navbar } from "./navbar";
 export { ScoreRing } from "./score-ring";

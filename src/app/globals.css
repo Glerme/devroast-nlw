@@ -32,3 +32,35 @@
 body {
 	@apply bg-bg-page text-text-primary font-mono;
 }
+
+/* CodeMirror overrides */
+.cm-editor {
+	border-radius: 0;
+}
+
+.cm-editor .cm-scroller {
+	font-family: var(--font-mono);
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.cm-editor.cm-focused {
+	outline: none;
+}
+
+.cm-editor .cm-scroller::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.cm-editor .cm-scroller::-webkit-scrollbar-track {
+	background: #0f0f0f;
+}
+
+.cm-editor .cm-scroller::-webkit-scrollbar-thumb {
+	background: #2a2a2a;
+}
+
+.cm-editor .cm-scroller::-webkit-scrollbar-thumb:hover {
+	background: #4b5563;
+}
