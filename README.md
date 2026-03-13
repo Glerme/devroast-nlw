@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevRoast
+
+**paste your code. get roasted.**
+
+DevRoast is a web app where developers paste their code and receive brutally honest feedback. Enable roast mode for extra sarcasm, see your score, and check the shame leaderboard to find out who wrote the worst code on the internet.
+
+## Features
+
+- **Code editor** — paste or type your code with syntax highlighting and line numbers
+- **Roast mode** — toggle between honest feedback and full savage mode
+- **Score** — get a score from 0 to 10 for your code quality
+- **Shame leaderboard** — a public ranking of the worst-scored code, sorted by shame
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# clone the repo
+git clone https://github.com/your-username/devroast.git
+cd devroast
+
+# install dependencies
+pnpm install
+
+# run the dev server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Built With
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js](https://nextjs.org/) — React framework
+- [Tailwind CSS](https://tailwindcss.com/) — utility-first styling
+- [Shiki](https://shiki.style/) — syntax highlighting
+- [Biome](https://biomejs.dev/) — linting and formatting
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
